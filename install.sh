@@ -7,7 +7,7 @@ sudo pip3 install -r requirements.txt
 
 mydir=${PWD##*/}
 
-cat >  myapp.wsgi << EOF
+cat > myapp.wsgi << EOF
 import sys 
 sys.path.insert(0, '/var/www/html/$mydir')
 from app import app as application
