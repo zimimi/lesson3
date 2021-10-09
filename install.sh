@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt install -y python3 python3-pip apache2 libapache2-mod-wsgi-py3
 sudo pip3 install virtualenv
-sudo virtualenv venv
+virtualenv venv
 source venv/bin/activate
 sudo pip3 install -r requirements.txt
 
