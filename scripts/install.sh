@@ -1,9 +1,6 @@
 #!/bin/bash
-sudo apt install -y python3 python3-pip apache2 libapache2-mod-wsgi-py3
-sudo pip3 install virtualenv
-virtualenv venv
-source venv/bin/activate
-sudo pip3 install -r requirements.txt
+sudo apt update
+sudo apt install -y apache2
 
 mydir=${PWD##*/}
 
@@ -15,7 +12,7 @@ EOF
 
 sudo ln -sT /home/ubuntu/$mydir /var/www/html/$mydir
 
-sudo cat > /etc/apache2/sites-enabled/000-default.conf << EOF
+cat > /etc/apache2/sites-enabled/000-default.conf << EOF
 <VirtualHost *:80>
         ServerAdmin webmaster@localhost
         DocumentRoot /var/www/html
