@@ -2,7 +2,7 @@
 
 {% block title %}Всі пости{% endblock %}
 
-{% block h1 %}Lesson 2 - Настольні ігри{% endblock %}
+{% block h1 %}Lesson 2 - Настольні ігри у шафі{% endblock %}
 
 {% block body %}
 
@@ -15,7 +15,7 @@
 </form>
 
 {% for el in articles %}
-<div class="alert alert-warning">
+<div class="alert alert-success">
   <h2>{{ el.title }}</h2><br>
   <p>Номер запису: {{ el.id }}</p>
   <p>Дата створення: {{ el.date.date() }}</p>
