@@ -1,0 +1,15 @@
+[proxy]
+linux1 ansible_host=172.31.7.38 
+
+[proxy:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=/home/ubuntu/.ssh/simple_server.pem
+
+
+[servers]
+linux2 ansible_host=172.31.14.168  
+linux3 ansible_host=172.31.8.151 
+
+[servers:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=/home/ubuntu/.ssh/simple_server.pem
